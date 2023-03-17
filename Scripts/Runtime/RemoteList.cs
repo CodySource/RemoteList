@@ -12,13 +12,15 @@ namespace CodySource
 
         #region PROPERTIES
 
+        private static RemoteList _instance;
         public static RemoteList instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = FindObjectsOfType<RemoteList>()?[0];
+                    RemoteList[] _all = FindObjectsOfType<RemoteList>();
+                    _instance = _all.Length>0?_all[0]:null;
                     if (_instance != null) return _instance;
                     GameObject obj = new GameObject();
                     obj.hideFlags = HideFlags.HideAndDontSave;
@@ -27,7 +29,6 @@ namespace CodySource
                 return _instance;
             }
         }
-        private static RemoteList _instance;
 
         public string defaultURL = "";
         public UnityEvent<string> onRequestFailed = new UnityEvent<string>();
