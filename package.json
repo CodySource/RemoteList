@@ -1,0 +1,14 @@
+{
+  "name": "com.codysource.remotelist",
+  "version": "1.0.0",
+  "displayName": "Remote List",
+  "description": "This package allows for a listing of remote files in a directory on a webserver with php installed.",
+  "unity": "2020.3",
+  "unityRelease": "15f2",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.0.2"
+  },
+  "author": {
+    "name": "Cody Source"
+  }
+}
